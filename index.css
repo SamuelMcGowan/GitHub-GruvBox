@@ -1,0 +1,200 @@
+/* ==UserStyle==
+@name           Github GruvBox
+@namespace      github.com
+@version        1.0.0
+@description    A GruvBox theme for GitHub.
+@author         Sam McGowan
+==/UserStyle== */
+
+@-moz-document domain("github.com") {
+
+    /* GruvBox colours */
+    :root {
+        --gruv-bg0_h: #1d2021;
+        --gruv-bg0_s: #32302f;
+        
+        --gruv-bg0: #282828;
+        --gruv-bg1: #3c3836;
+        --gruv-bg2: #504945;
+        --gruv-bg3: #665c54;
+        --gruv-bg4: #7c6f64;
+        
+        --gruv-fg0: #fbf1c7;
+        --gruv-fg1: #ebdbb2;
+        --gruv-fg2: #d5c4a1;
+        --gruv-fg3: #bdae93;
+        --gruv-fg4: #a89984;
+        
+        --gruv-gray: #928374;
+        
+        --gruv-red-light: #fb4934;
+        --gruv-red-dark: #cc241d;
+        
+        --gruv-orange-light: #fe8019;
+        --gruv-orange-dark: #d65d0e;
+        
+        --gruv-yellow-light: #fabd2f;
+        --gruv-yellow-dark: #d79921;
+        
+        --gruv-green-light: #b8bb26;
+        --gruv-green-dark: #98971a;
+        
+        --gruv-aqua-light: #8ec07c;
+        --gruv-aqua-dark: #689d6a;
+        
+        --gruv-blue-light: #83a598;
+        --gruv-blue-dark: #458588;
+        
+        --gruv-purple-light: #d3869b;
+        --gruv-purple-dark: #b16286;
+    }
+
+    /* General */
+    html {
+        background-color: var(--gruv-bg0) !important;
+    }
+
+    body {
+        --color-canvas-default: var(--gruv-bg0);
+        --color-canvas-inset: var(--gruv-bg0_h);
+        --color-canvas-overlay: var(--gruv-bg0_s);
+        --color-canvas-subtle: var(--gruv-bg0_s);
+        
+        --color-fg-default: var(--gruv-fg1);
+        --color-fg-muted: var(--gruv-blue-light);
+        --color-fg-subtle: var(--gruv-aqua-dark);
+        --color-primer-fg-disabled: var(--gruv-gray);
+        
+        --color-header-bg: var(--gruv-bg0_h);
+        --color-header-logo: var(--gruv-fg2);
+        --color-header-text: var(--gruv-red-light);
+        --color-header-search-bg: var(--gruv-bg0);
+        --color-header-search-border: var(--gruv-bg1);
+        
+        --color-page-header-bg: var(--gruv-bg);
+        
+        --color-border-muted: var(--gruv-bg0_h);
+        --color-border-default: var(--gruv-bg0_s);
+        
+        --color-btn-text: var(--gruv-fg2);
+        --color-btn-bg: var(--gruv-bg1);
+        --color-btn-hover-bg: var(--gruv-bg2);
+        --color-btn-active-bg: var(--gruv-bg1);
+        --color-btn-active-border: var(--gruv-bg2);
+        --color-btn-selected-bg: var(--gruv-bg2);
+        --color-btn-selected-border: var(--gruv-bg2);
+        --color-btn-focus-border: var(--gruv-bg3);
+        
+        --color-btn-border: var(--gruv-bg2);
+        --color-btn-hover-border: var(--gruv-bg3);
+        --color-btn-primary-bg: var(--gruv-purple-dark);
+        --color-btn-primary-hover-bg: var(--gruv-purple-light);
+        --color-btn-primary-active-bg: var(--gruv-purple-dark);
+        --color-btn-primary-focus-bg: var(--gruv-purple-dark);
+        --color-btn-primary-selected-bg: var(--gruv-purple-dark);
+        
+        --color-accent-fg: var(--gruv-green-dark);
+        --color-accent-emphasis: var(--gruv-red-light);
+        --color-accent-subtle: var(--gruv-bg0_s);
+        --color-fg-on-emphasis: var(--gruv-bg0_h);
+        
+        --color-btn-counter-bg: var(--color-accent-subtle);
+        
+        --color-btn-outline-text: var(--gruv-green-dark);
+        --color-btn-outline-hover-text: var(--gruv-green-light);
+        --color-btn-outline-hover-bg: var(--gruv-bg2);
+        --color-btn-outline-hover-border: var(--gruv-bg3);
+        
+        --color-icon-directory: var(--color-fg-subtle);
+        
+        --color-attention-subtle: var(--gruv-bg0_h);
+        --color-attention-muted: var(--gruv-green-light);
+    }
+
+    /* Syntax Highlighting (when viewing) */
+    body {
+        --color-prettylights-syntax-comment: var(--gruv-gray);
+        --color-prettylights-syntax-constant: var(--gruv-blue-light);
+        --color-prettylights-syntax-entity: var(--gruv-purple-light);
+        --color-prettylights-syntax-storage-modifier: var(--gruv-fg1);
+        --color-prettylights-syntax-entity-tag: var(--gruv-aqua-light);
+        --color-prettylights-syntax-keyword: var(--gruv-red-light);
+        --color-prettylights-syntax-string: var(--gruv-green-light);
+        --color-prettylights-syntax-variable: var(--gruv-yellow-light);
+        --color-prettylights-syntax-brackethighlighter-unmatched: var(--gruv-red-dark);
+        --color-prettylights-syntax-invalid-illegal-text: var(--gruv-fg1);
+        --color-prettylights-syntax-invalid-illegal-bg: var(--gruv-red-dark);
+        --color-prettylights-syntax-carriage-return-text: var(--gruv-fg1);
+        --color-prettylights-syntax-carriage-return-bg: var(--gruv-red-dark);
+        --color-prettylights-syntax-string-regexp: var(--gruv-aqua-light);
+        --color-prettylights-syntax-markup-list: var(--gruv-yellow-light);
+        --color-prettylights-syntax-markup-heading: var(--gruv-blue-light);
+        --color-prettylights-syntax-markup-italic: var(--gruv-fg2);
+        --color-prettylights-syntax-markup-bold: var(--gruv-purple-light);
+        /* Maybe I'll do the rest another day. */
+    }
+
+    /* Syntax Highlighting (when editing, barely done anything here)*/
+    body {
+        --color-codemirror-text: var(--gruv-fg1);
+        --color-codemirror-bg: var(--color-canvas-default);
+        --color-codemirror-gutters-bg: var(--color-canvas-default);
+        --color-codemirror-guttermarker-text: var(--color-canvas-default);
+        --color-codemirror-guttermarker-subtle-text: var(--gruv-bg3);
+        --color-codemirror-linenumber-text: var(--gruv-bg3);
+        --color-codemirror-cursor: var(--gruv-fg1);
+        --color-codemirror-selection-bg: var(--gruv-bg1);
+        --color-codemirror-activeline-bg: var(--gruv-bg0_h);
+        --color-codemirror-lines-bg: var(--color-canvas-default);
+        /* Finish later. */
+    }
+
+    /* More misc. stuff */
+    [data-color-mode="light"][data-light-theme="dark"],
+    [data-color-mode="dark"][data-dark-theme="dark"]
+    {
+        --color-scale-black: var(--gruv-bg0_h);
+        --color-scale-white: var(--gruv-fg0);
+        --color-scale-gray-0: var(--gruv-fg0);
+    }
+
+    .breadcrumb strong.final-path {
+        color: var(--color-fg-muted);
+    }
+
+    .Link--primary:hover {
+        color: var(--gruv-fg0) !important;
+    }
+
+    .Link--secondary:hover {
+        color: var(--gruv-blue-dark) !important;
+    }
+
+    .feature-preview-indicator {
+        background: none;
+        background-color: var(--color-header-text);
+    }
+
+    .SelectMenu-item {
+        border-bottom-color: var(--color-border-default);
+    }
+
+    input[type="checkbox"] {
+        border-color: var(--gruv-bg2) !important;
+    }
+
+    .blob-num {
+        color: var(--gruv-bg3);
+    }
+
+    .blob-num:hover {
+        color: var(--color-accent-fg);
+    }
+
+    /* Use the user's default monospace font. */
+    code {
+        font-family: monospace;
+        font-size: 0.8em;
+    }
+
+}
